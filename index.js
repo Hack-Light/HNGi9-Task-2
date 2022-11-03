@@ -33,32 +33,42 @@ app.post("/", (req, res) => {
   if (
     operation_type.includes("add") ||
     operation_type.includes("sum") ||
-    operation_type.includes("plus")
+    operation_type.includes("plus") ||
+    operation_type.includes("+")
   ) {
     result = operation.adddition;
-    operation_type = "addition";
+    // operation_type = "addition";
   }
 
   //   subtraction: x - y,
   if (
     operation_type.includes("subtract") ||
     operation_type.includes("minus") ||
+    operation_type.includes("-") ||
     operation_type.includes("less")
   ) {
     result = operation.subtraction;
-    operation_type = "subtraction";
+    // operation_type = "subtraction";
   }
 
   //   multiplication: x * y,
-  if (operation_type.includes("multiply") || operation_type.includes("times")) {
+  if (
+    operation_type.includes("multiply") ||
+    operation_type.includes("*") ||
+    operation_type.includes("times")
+  ) {
     result = operation.multiplication;
-    operation_type = "multiplication";
+    // operation_type = "multiplication";
   }
 
   //   division: x / y,
-  if (operation_type.includes("divide") || operation_type.includes("by")) {
+  if (
+    operation_type.includes("divide") ||
+    operation_type.includes("/") ||
+    operation_type.includes("by")
+  ) {
     result = operation.division;
-    operation_type = "division";
+    // operation_type = "division";
   }
 
   res.json({
