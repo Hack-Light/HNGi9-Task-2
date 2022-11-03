@@ -71,7 +71,7 @@ app.post("/", (req, res) => {
     // operation_type = "division";
   }
 
-  res.json({
+  res.setHeader("Content-Type", "application/json").json({
     slackUsername: "Light",
     operation_type: operation_type,
     result: result,
