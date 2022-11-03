@@ -37,7 +37,7 @@ app.post("/", (req, res) => {
     operation_type.includes("+")
   ) {
     result = operation.adddition;
-    // operation_type = "addition";
+    operation_type = "addition";
   }
 
   //   subtraction: x - y,
@@ -48,7 +48,7 @@ app.post("/", (req, res) => {
     operation_type.includes("less")
   ) {
     result = operation.subtraction;
-    // operation_type = "subtraction";
+    operation_type = "subtraction";
   }
 
   //   multiplication: x * y,
@@ -58,7 +58,7 @@ app.post("/", (req, res) => {
     operation_type.includes("times")
   ) {
     result = operation.multiplication;
-    // operation_type = "multiplication";
+    operation_type = "multiplication";
   }
 
   //   division: x / y,
@@ -68,7 +68,7 @@ app.post("/", (req, res) => {
     operation_type.includes("by")
   ) {
     result = operation.division;
-    // operation_type = "division";
+    operation_type = "division";
   }
 
   res.setHeader("Content-Type", "application/json").json({
